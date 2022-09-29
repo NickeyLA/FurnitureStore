@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="Мебель.Assort.Assort_Bads"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Мебель.Assort"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Foreground="#FF2B75A9">
+   
+    <UserControl.Background>
+        <SolidColorBrush Color="#FF212529"/>
+    </UserControl.Background>
+
+
+    <Border BorderBrush="#212529" BorderThickness="2" Margin="5" Height="auto" >
+        <!--Создали обводку элемента-->
+        <Grid Background="#FF212529">
+            <Grid.RowDefinitions>
+                <!--Определим 2 строки в сетке-->
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Column="0" Grid.Row="0" Height="auto" VerticalAlignment="Stretch">
+                <Image x:Name="MebImg" Stretch="UniformToFill" HorizontalAlignment="Stretch" VerticalAlignment="Top"/>
+                <!--Фото мебели-->
+
+                <Label VerticalAlignment="Top" FontWeight="Bold" FontSize="20" x:Name="MebName" Foreground="#FFAEAED4"/>
+                <!--Название Мебели-->
+                <TextBlock Margin="5" x:Name="MebDis" Background="#FF2A3035" TextWrapping="Wrap"/>
+                <!--Описание -->
+
+            </StackPanel>
+
+
+            <Grid Grid.Column="0" Grid.Row="1" VerticalAlignment="Bottom">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <UniformGrid Grid.Row="0" Grid.Column="0" Margin="5,0" Columns="2" VerticalAlignment="Bottom">
+                    <Label x:Name="Meb_PricesXAM" Foreground="#FF2B75A9" HorizontalAlignment="Left"/>
+
+                    <!--  <Border CornerRadius="10" BorderBrush="#95c866" BorderThickness="1" VerticalAlignment="Center" HorizontalAlignment="Right" Background="#95c866">
+                        <UniformGrid VerticalAlignment="Center" Columns="3">
+                            <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="12" FontWeight="DemiBold" Foreground="White" VerticalAlignment="Stretch" Content="   -   " PreviewMouseDown="CountMinus"/>
+                            <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="White" FontSize="18" FontWeight="DemiBold" Foreground="#95c866" VerticalAlignment="Stretch" Content="1" x:Name="FoodCount"/>
+                            <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="12" FontWeight="DemiBold" Foreground="White" VerticalAlignment="Stretch" Content="   +   " PreviewMouseDown="CountPlus"/>
+                        </UniformGrid>
+                    </Border>-->
+                </UniformGrid>
+
+            </Grid>
+            <Button Grid.Row="1" Grid.Column="0"  Content="В корзину" Margin="10"   HorizontalAlignment="Right" Click="AddElementToBAsket" VerticalAlignment="Bottom"/>
+
+        </Grid>
+    </Border>
+</UserControl>

@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="Мебель.BusketElement"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Мебель"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid VerticalAlignment="Center" Height="auto" Width="auto">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock TextWrapping="Wrap" HorizontalAlignment="Center" FontSize="16" Text="Cтул + Стол" x:Name="BasketElement_name" Grid.Column="0"/>
+        <Label Foreground="#FFAEAED4" HorizontalAlignment="Center" Content="175/75/30" x:Name="BasketElement_Desc" Grid.Column="1"/>
+        <Label Foreground="#FFAEAED4" HorizontalAlignment="Center" FontSize="20" Content="175/75/30" x:Name="BasketElement_count" Grid.Column="2"/>
+        <Label Foreground="#FFAEAED4" HorizontalAlignment="Center" FontWeight="Bold" FontSize="20" Content="1985" x:Name="BasketElement_Prise" Grid.Column="3"/>
+        <Button HorizontalAlignment="Right" Click="RemoveBascetElement" Grid.Column="4" VerticalAlignment="Center" Margin="0,8,5,8.667" Content="x" Width="19"/>
+    </Grid>
+</UserControl>
